@@ -1,5 +1,9 @@
 # Custom Electron Prompt
 
+Custom prompts for Electron
+
+![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)
+
 Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt) 
 
 The author of that package didn't want much contribution or change, but you are more than welcome to contribute and create new stable prompt features over here :)
