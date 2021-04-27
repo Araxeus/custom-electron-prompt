@@ -1,12 +1,8 @@
 # Custom Electron Prompt
 
-Custom prompts for Electron
+Custom prompts for Electron made easy
 
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
-
-Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt) 
-
-The author of that package didn't want much contribution or change, but you are more than welcome to contribute and create new stable prompt features over here :)
 
 ## Input Prompt Example Screenshot
 
@@ -259,3 +255,7 @@ module.exports = () => {
     // So you can use front features like `document.querySelector`
 };
 ```
+
+Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt) 
+
+The author of that package didn't want much contribution or change, but you are more than welcome to contribute and create new stable prompt features over here :)
