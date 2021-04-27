@@ -1,6 +1,6 @@
 {
   "name": "custom-electron-prompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Input/SelectMultiple/Counter/Keybind Chooser prompt creator with easy customization",
   "keywords": [
     "electron",
