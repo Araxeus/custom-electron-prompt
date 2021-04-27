@@ -1,6 +1,6 @@
 {
   "name": "custom-electron-prompt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Input/SelectMultiple/Counter/Keybind Chooser prompt creator with easy customization",
   "keywords": [
     "electron",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/araxeus/electron-prompt.git"
+    "url": "https://github.com/araxeus/custom-electron-prompt.git"
   },
   "license": "MIT",
   "main": "lib/index.js",
