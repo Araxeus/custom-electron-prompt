@@ -4,7 +4,7 @@ Disclaimer: this package is a highly modified version of  [electron-prompt](http
 
 The author of that package didn't want much contribution or change, but you are more than welcome to contribute and create new stable prompt features over here :)
 
-## Input Prompt Screenshot
+## Input Prompt Example Screenshot
 
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
