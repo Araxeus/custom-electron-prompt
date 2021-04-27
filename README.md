@@ -2,7 +2,7 @@
 
 Custom prompts for Electron
 
-![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)
+[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 
 Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt) 
 
