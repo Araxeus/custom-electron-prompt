@@ -6,7 +6,7 @@ The author of that package didn't want much contribution or change, but you are 
 
 ## Input Prompt Screenshot
 
-![](screenshots/Input/Input.png) ![](screenshots/Input/InputDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
 ## Usage
 
@@ -115,9 +115,9 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](screenshots/Keybind/Keybind3.png) ![](screenshots/Keybind/Keybind.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
 
-![](screenshots/Keybind/KeybindDark3.png) ![](screenshots/Keybind/KeybindDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
 #### counter
@@ -157,7 +157,7 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](screenshots/Counter/Counter.png) ![](screenshots/Counter/CounterDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
 </details>
 
 #### select
@@ -198,9 +198,9 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](screenshots/Select/SelectClosed.png) ![](screenshots/Select/SelectOpen.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
 
-![](screenshots/Select/SelectDarkClosed.png) ![](screenshots/Select/SelectDarkOpen.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
 </details>
 
 ### Options object (optional)
