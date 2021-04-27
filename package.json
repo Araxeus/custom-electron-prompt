@@ -1,7 +1,7 @@
 {
   "name": "custom-electron-prompt",
   "version": "1.0.2",
-  "description": "Input/SelectMultiple/Counter/Keybind Chooser prompt creator with easy customization",
+  "description": "Custom prompt for electron made easy with various templates",
   "homepage": "https://github.com/araxeus/custom-electron-prompt#readme",
   "keywords": [
     "electron",
