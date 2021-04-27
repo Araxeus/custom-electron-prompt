@@ -1,0 +1,47 @@
+{
+  "name": "custom-electron-prompt",
+  "version": "1.0.0",
+  "description": "Input/SelectMultiple/Counter/Keybind Chooser prompt creator with easy customization",
+  "keywords": [
+    "electron",
+    "input",
+    "select",
+    "counter",
+    "accelerator",
+    "keybind",
+    "prompt",
+    "dialog"
+  ],
+  "author": {
+    "name": "Araxeus",
+    "email": "araxeus@users.noreply.github.com",
+    "url": "https://github.com/araxeus"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/araxeus/electron-prompt.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "test": "npm run lint"
+  },
+  "xo": {
+    "esnext": true,
+    "env": [
+      "node",
+      "browser"
+    ],
+    "rules": {
+      "unicorn/prefer-ternary": 0
+    }
+  },
+  "dependencies": {
+    "electron": "^11.4.4"
+  },
+  "devDependencies": {
+    "xo": "^0.38.2"
+  }
+}
