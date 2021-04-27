@@ -4,6 +4,10 @@ Disclaimer: this package is a highly modified version of  [electron-prompt](http
 
 The author of that package didn't want much contribution or change, but you are more than welcome to contribute and create new stable prompt features over here :)
 
+## Input Prompt Screenshot
+
+![](screenshots/Input/Input.png) ![](screenshots/Input/InputDark.png)
+
 ## Usage
 
 1. Install the npm package to your project directory with
@@ -81,9 +85,40 @@ Return an array made of objects in format
 
 where `accelerator` is the input for the `value` you registered
 
-Code Example:
+ <details>
+  <summary> Code Example </summary>
+    
+ ```javascript
+const kb = ($value, $label, $default) => { return { value: $value, label: $label, default: $default } };
+prompt({
+	title: "Keybinds",
+	label: "Select keybind for each method",
+	type: "keybind",
+	value: "2",
+	keybindOptions: [
+		{ value: "volumeUp", label: "Increase Volume", default: "Shift+PageUp" },
+		kb("volumeDown", "Decrease Volume", "Shift+PageDown"),
+		kb("playPause", "Play / Pause") // (null || empty string || undefined) == no default
+	],
+	resizable: true,
+	customStylesheet: "dark",
+}, win).then(input => {
+	if (input)
+		input.forEach(obj => console.log(obj))
+	else
+		console.log("Pressed Cancel");
+})
+	.catch(console.error)
+ ```
+ </details>
+ 
+ <details>
+  <summary> Screenshots </summary>
 
-Pictures:
+![](screenshots/Keybind/Keybind3.png) ![](screenshots/Keybind/Keybind.png)
+
+![](screenshots/Keybind/KeybindDark3.png) ![](screenshots/Keybind/KeybindDark.png)
+</details>
 
 #### counter
 
@@ -101,9 +136,29 @@ counterOptions: {
 
  minimum and maximum of numeric counter, and multifire indicate if continuous input is enabled.
 
-Code Example:
+ <details>
+  <summary> Code Example </summary>
+    
+ ```javascript
+prompt({
+	title: "Counter",
+	label: "Choose a number:",
+	value: "59",
+	type: "counter",
+	counterOptions: { minimum: -69, maximum: null, multiFire: true },
+	resizable: true,
+	height: 150,
+	width: 300,
+	customStylesheet: "dark",
+}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+ ```
+ </details>
+ 
+ <details>
+  <summary> Screenshots </summary>
 
-Pictures:
+![](screenshots/Counter/Counter.png) ![](screenshots/Counter/CounterDark.png)
+</details>
 
 #### select
 
@@ -121,9 +176,32 @@ Must specify selectOptions with valid entries in **one** of the following format
  }
 ```
 
-Code Example:
+<details>
+  <summary> Code Example </summary>
+    
+ ```javascript
+prompt({
+	title: "Select",
+	label: "Choose an option:",
+	type: "select",
+	value: "2",
+	selectOptions: ["thisReturn0", "thisReturn1", "imSelected", "thisReturn3"],
+	// 	selectOptions: {0: "thisReturn0", 1: "thisReturn1", 2: "imSelected" , potato: "thisReturnPotato"},
+	resizable: true,
+	height: 150,
+	width: 300,
+	customStylesheet: "dark",
+}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+ ```
+ </details>
+ 
+ <details>
+  <summary> Screenshots </summary>
 
-Pictures:
+![](screenshots/Select/SelectClosed.png) ![](screenshots/Select/SelectOpen.png)
+
+![](screenshots/Select/SelectDarkClosed.png) ![](screenshots/Select/SelectDarkOpen.png)
+</details>
 
 ### Options object (optional)
 
