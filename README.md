@@ -1,10 +1,13 @@
 # Custom Electron Prompt
 
-Custom prompts for Electron made easy
-
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 
-## Input Prompt Example Screenshot
+Custom prompts for Electron made easy
+
+There are currently 4 types available: Input / Keybind / Counter / Select
+
+
+## Example of a Simple Prompt from Input Type
 
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
@@ -40,7 +43,7 @@ Custom prompts for Electron made easy
 
        On error, Prompise reject returns custom error message
 
-### Simple Example
+### Simple Input Example
 
 ```javascript
 const prompt = require('./prompt');
@@ -64,9 +67,11 @@ prompt({
 .catch(console.error);
 ```
 
-### Special Prompt Types
+## Special Prompt Types
 
-#### keybind
+----
+
+### keybind
 
 Create a prompt with possibly multiple keybind selects
 
@@ -94,7 +99,7 @@ prompt({
 	title: "Keybinds",
 	label: "Select keybind for each method",
 	type: "keybind",
-	value: "2",
+	value: "2", // Doesn't do anything here
 	keybindOptions: [
 		{ value: "volumeUp", label: "Increase Volume", default: "Shift+PageUp" },
 		kb("volumeDown", "Decrease Volume", "Shift+PageDown"),
@@ -120,7 +125,9 @@ prompt({
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
-#### counter
+----
+
+### counter
 
 Create a prompt for selecting numeric values, with integrated `+` and `-` buttons
 
@@ -160,7 +167,9 @@ prompt({
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
 </details>
 
-#### select
+----
+
+### select
 
 Create a prompt with a dropdown select menu.
 
@@ -203,9 +212,11 @@ prompt({
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
 </details>
 
-### Options object (optional)
+----
 
-#### ⚠️ New options :
+## Options object (optional)
+
+### ⚠️ New options :
 
 | Key                | Explanation                                                                                                                                                                                                                                                    |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,7 +228,7 @@ prompt({
 | counterOptions     | (optional, object) minimum and maximum of counter, and if continuous input is enabled. format: `{minimum: %int%, maximum: %int%, multiFire: %boolean%`. min+max values defaults to null and multiFire defaults to false.                                       |
 | keybindOptions     | (optional, object)  Required if type=keybind. represent an array of objects in format: `{type: %string%, value: %string%, default: %string%}`. `default` has to be a valid accelerator to work                                                                 |
 
-#### Original options:
+### Original options:
 
 | Key            | Explanation                                                                                                                                                                                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
