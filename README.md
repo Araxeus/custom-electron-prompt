@@ -5,7 +5,7 @@ There are currently 4 types available: Input / Keybind / Counter / Select
 
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 
-## Input Prompt Example Screenshot
+## Example of a Simple Prompt from Input Type
 
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
@@ -41,7 +41,7 @@ There are currently 4 types available: Input / Keybind / Counter / Select
 
        On error, Prompise reject returns custom error message
 
-### Simple Example
+### Simple Input Example
 
 ```javascript
 const prompt = require('./prompt');
