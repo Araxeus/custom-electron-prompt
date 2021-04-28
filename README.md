@@ -22,19 +22,19 @@ Custom prompts for Electron made easy
    yarn add custom-electron-prompt
    ```
 
-2. Import folder
+2. Import prompt
    
    ```javascript
    const prompt = require('custom-electron-prompt')
    ```
 
-3. Create prompt
+3. Create a prompt
    
    ```javascript
    prompt([options, parentBrowserWindow])
    ```
    
-   calling prompt function returns a Promise
+   calling the prompt function returns a Promise
    
    Promise resolve returns the input or returns null if prompt was canceled
 
