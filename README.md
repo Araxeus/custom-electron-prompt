@@ -1,10 +1,11 @@
 # Custom Electron Prompt
 
+[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
+
 Custom prompts for Electron made easy
 
 There are currently 4 types available: Input / Keybind / Counter / Select
 
-[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 
 ## Example of a Simple Prompt from Input Type
 
