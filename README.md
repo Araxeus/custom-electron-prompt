@@ -1,6 +1,7 @@
 # Custom Electron Prompt
 
 Custom prompts for Electron made easy
+
 There are currently 4 types available: Input / Keybind / Counter / Select
 
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
@@ -66,6 +67,8 @@ prompt({
 ```
 
 ## Special Prompt Types
+
+----
 
 ### keybind
 
@@ -210,9 +213,9 @@ prompt({
 
 ----
 
-### Options object (optional)
+## Options object (optional)
 
-#### ⚠️ New options :
+### ⚠️ New options :
 
 | Key                | Explanation                                                                                                                                                                                                                                                    |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -224,7 +227,7 @@ prompt({
 | counterOptions     | (optional, object) minimum and maximum of counter, and if continuous input is enabled. format: `{minimum: %int%, maximum: %int%, multiFire: %boolean%`. min+max values defaults to null and multiFire defaults to false.                                       |
 | keybindOptions     | (optional, object)  Required if type=keybind. represent an array of objects in format: `{type: %string%, value: %string%, default: %string%}`. `default` has to be a valid accelerator to work                                                                 |
 
-#### Original options:
+### Original options:
 
 | Key            | Explanation                                                                                                                                                                                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
