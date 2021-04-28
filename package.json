@@ -33,7 +33,15 @@
       "browser"
     ],
     "rules": {
-      "unicorn/prefer-ternary": 0
+      "unicorn/prefer-ternary": 0,
+      "quotes": [
+				"error",
+				"double",
+				{
+					"avoidEscape": true,
+					"allowTemplateLiterals": true
+				}
+			]
     }
   },
   "dependencies": {
