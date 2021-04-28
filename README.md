@@ -1,6 +1,7 @@
 # Custom Electron Prompt
 
 Custom prompts for Electron made easy
+There are currently 4 types available: Input / Keybind / Counter / Select
 
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 
@@ -64,9 +65,9 @@ prompt({
 .catch(console.error);
 ```
 
-### Special Prompt Types
+## Special Prompt Types
 
-#### keybind
+### keybind
 
 Create a prompt with possibly multiple keybind selects
 
@@ -120,7 +121,9 @@ prompt({
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
-#### counter
+----
+
+### counter
 
 Create a prompt for selecting numeric values, with integrated `+` and `-` buttons
 
@@ -160,7 +163,9 @@ prompt({
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
 </details>
 
-#### select
+----
+
+### select
 
 Create a prompt with a dropdown select menu.
 
@@ -202,6 +207,8 @@ prompt({
 
 ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
 </details>
+
+----
 
 ### Options object (optional)
 
