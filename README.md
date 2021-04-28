@@ -98,7 +98,7 @@ prompt({
 	title: "Keybinds",
 	label: "Select keybind for each method",
 	type: "keybind",
-	value: "2",
+	value: "2", // Doesn't do anything here
 	keybindOptions: [
 		{ value: "volumeUp", label: "Increase Volume", default: "Shift+PageUp" },
 		kb("volumeDown", "Decrease Volume", "Shift+PageDown"),
