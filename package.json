@@ -1,6 +1,6 @@
 {
   "name": "custom-electron-prompt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom prompt for electron made easy with various templates",
   "homepage": "https://github.com/araxeus/custom-electron-prompt#readme",
   "keywords": [
@@ -35,13 +35,13 @@
     "rules": {
       "unicorn/prefer-ternary": 0,
       "quotes": [
-				"error",
-				"double",
-				{
-					"avoidEscape": true,
-					"allowTemplateLiterals": true
-				}
-			]
+        "error",
+        "double",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ]
     }
   },
   "dependencies": {
