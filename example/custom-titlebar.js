@@ -1,3 +1,5 @@
+// this file could be used as a custom script, to use a custom titlebar
+
 const customTitlebar = require("custom-electron-titlebar");
 
 module.exports = () => {
