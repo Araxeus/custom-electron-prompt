@@ -1,7 +1,7 @@
 {
   "name": "custom-electron-prompt",
   "version": "1.0.4",
-  "description": "Custom prompt for electron made easy with various templates",
+  "description": "Custom prompt for Electron made easy with various templates",
   "homepage": "https://github.com/araxeus/custom-electron-prompt#readme",
   "keywords": [
     "electron",
@@ -20,7 +20,7 @@
   },
   "repository": "github:araxeus/custom-electron-prompt",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/index",
   "scripts": {
     "lint": "xo",
     "lint:fix": "xo --fix",

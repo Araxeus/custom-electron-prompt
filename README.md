@@ -2,7 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 
-Custom prompts for Electron made easy
+Custom prompt for Electron made easy with various templates
 
 There are currently 4 types available: Input / Keybind / Counter / Select
 
