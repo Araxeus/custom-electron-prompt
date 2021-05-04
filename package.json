@@ -44,8 +44,8 @@
       ]
     }
   },
-  "dependencies": {
-    "electron": "^11.4.4"
+  "peerDependencies": {
+    "electron": "^10.0.0 || ^11.0.0 || ^12.0.0"
   },
   "devDependencies": {
     "xo": "^0.38.2"
