@@ -1,6 +1,6 @@
 {
   "name": "custom-electron-prompt",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Custom prompt for Electron made easy with various templates",
   "homepage": "https://github.com/araxeus/custom-electron-prompt#readme",
   "keywords": [
