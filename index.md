@@ -95,7 +95,7 @@ where `accelerator` is the input for the `value` you registered
  <details>
   <summary> Code Example </summary>
     
- ```javascript
+{% highlight javascript %}
 const kb = ($value, $label, $default) => { return { value: $value, label: $label, default: $default } };
 prompt({
 	title: "Keybinds",
@@ -116,17 +116,17 @@ prompt({
 		console.log("Pressed Cancel");
 })
 	.catch(console.error)
- ```
+{% endhighlight %}
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png">
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png">
 </details>
 
 ----
@@ -150,7 +150,7 @@ counterOptions: {
  <details>
   <summary> Code Example </summary>
     
- ```javascript
+{% highlight javascript %}
 prompt({
 	title: "Counter",
 	label: "Choose a number:",
@@ -162,14 +162,15 @@ prompt({
 	width: 300,
 	customStylesheet: "dark",
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- ```
+{% endhighlight %}
+
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png">
 </details>
 
 ----
@@ -193,7 +194,7 @@ Must specify selectOptions with valid entries in **one** of the following format
 <details>
   <summary> Code Example </summary>
     
- ```javascript
+ {% highlight javascript %}
 prompt({
 	title: "Select",
 	label: "Choose an option:",
@@ -206,17 +207,17 @@ prompt({
 	width: 300,
 	customStylesheet: "dark",
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- ```
+{% endhighlight %}
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png">
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png">
 </details>
 
 ----
