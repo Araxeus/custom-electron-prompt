@@ -1,12 +1,13 @@
 theme: jekyll-theme-hacker
 title: Custom Electron Prompt
 locale: en_US
+describtion: "Custom prompt for electron made easy with various templates"
 # logo: # filename of a logo image that has been placed into your images directory
 
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
   name: Araxeus
-  bio: "Custom prompt for electron made easy with various templates"
+  bio: "I Like Coding :)"
   github: Araxeus
   # avatar: example.jpg
   # email: example@gmail.com
