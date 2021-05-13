@@ -4,6 +4,7 @@ locale: en_US
 describtion: "Custom prompt for electron made easy with various templates"
 # logo: # filename of a logo image that has been placed into your images directory
 
+author: Araxeus
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
   name: Araxeus
