@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-cayman
 title: Custom Electron Prompt
 locale: en_US
 describtion: "Custom prompt for electron made easy with various templates"
