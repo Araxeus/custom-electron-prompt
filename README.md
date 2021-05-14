@@ -214,6 +214,59 @@ prompt({
 
 ----
 
+### multiInput
+
+Create a prompt with multiple inputs.
+
+Must specify selectOptions with valid entries in **one** of the following format:
+
+```javascript
+ selectOptions: [{myinputoptions1}, {myinputoptions2}]
+ selectOptions: {
+     0: {thisReturn0},
+     1: {thisReturn1}
+ }
+```
+
+<details>
+  <summary> Code Example </summary>
+    
+ ```javascript
+prompt({
+	title: "credentials",
+	label: "Please enter username and password",
+	type: "multiInput",
+	multiInputOptions:
+    [{
+        inputAttrs:
+             {
+                type: "email",
+                required: true,
+                placeholder: "email"
+              }
+      },
+      {
+         inputAttrs:
+             {
+                type: "password",
+                placeholder: "password"
+              }
+     }],
+	resizable: true,
+	height: 150,
+	width: 300,
+}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+ ```
+ </details>
+ 
+ <details>
+  <summary> Screenshots </summary>
+
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.png)
+</details>
+
+----
+
 ## Options object (optional)
 
 ### ⚠️ New options :
