@@ -230,8 +230,8 @@ Create a prompt with multiple inputs.
 Must specify selectOptions with valid entries in **one** of the following format:
 
 ```javascript
- selectOptions: [{myinputoptions1}, {myinputoptions2}]
- selectOptions: {
+ multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
+ multiInputOptions: {
      0: {thisReturn0},
      1: {thisReturn1}
  }
@@ -271,12 +271,25 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.png)
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
+
+
+This screenshot also contains a custom button.
+    
 </details>
 
 ----
 
 ## Options object (optional)
+
+### ⚠️⚠️ More new options :
+
+| Key                | Explanation                                                                                                                                                                                                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| button       | (optional, object) adds a button after the success(OK) with a custom label, onClick and attributes. Object format: `{label: 'myLabel', click: () => alert("click"), attrs: {style: 'background: black'}}`, `{label: %string%, click: %function%, attrs: %object%}`|
+| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or `counter` for a number counter with buttons. or `keybind` for an electron accelerator grabber. or **`multiInput` to use more than 1 input in a prompt** Defaults to 'input'. |
+| multiInputOptions     | (optional, object) an Array of objects having options for every input, format: `[{inputAttrs:{type:'email'}},{inputAttrs:{type:'password'}}]`, `[object, object]` to use it without passing any options simply `[{},{},{}]`, just create x amount of empty objects to add x inputs.                                       |
+
 
 ### ⚠️ New options :
 
@@ -328,6 +341,69 @@ module.exports = () => {
     // So you can use front features like `document.querySelector`
 };
 ```
+----
+
+### Custom/Extra Button (optional)
+
+Adds an extra/custom button with special functionalities other than success or error. Passing a `label` will update the button's innerHTML, `click` should be a funtion which will execute **onclick**, lastly `attrs` should contain all the attributes that should be added to the button such as custom styles.
+
+ <details>
+  <summary> Code Example </summary>
+    
+    
+```javascript
+await prompt({
+            title: 'Login credentials',
+            label: 'Credentials',
+            value: 'http://example.org',
+            inputAttrs: {
+                type: 'url'
+            },
+            type: 'multiInput',
+            multiInputOptions:
+                [{
+                    label: "username",
+                    inputAttrs:
+                    {
+                        type: "email",
+                        required: true,
+                        placeholder: "email"
+                    }
+                },
+                {
+                    label: "password",
+                    inputAttrs:
+                    {
+                        type: "password",
+                        placeholder: "password"
+                    }
+                }],
+            // customStylesheet: "dark",
+            button:
+            {
+                label: "Autofill",
+                click: () => 
+                {
+                    document.querySelectorAll("#data")[0].value = "mama@young.com";
+                    document.querySelectorAll("#data")[1].value = "mysecretrecipe";
+                },
+                attrs:
+                {
+                    abc: 'xyz'
+                }
+            }
+        }));
+```   
+    
+</details>
+
+ <details>
+  <summary> Screenshots </summary>
+    
+    
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
+</details>
+
 ----
 
 > Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt)
