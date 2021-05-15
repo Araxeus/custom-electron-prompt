@@ -1,6 +1,9 @@
 # Custom Electron Prompt
 
-[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
+[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Araxeus/custom-electron-prompt)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://araxeus.github.io/custom-electron-prompt)
 
 Custom prompt for Electron made easy with various templates
 
@@ -9,7 +12,8 @@ There are currently 4 types available: Input / Keybind / Counter / Select
 
 ## Example of a Simple Prompt from Input Type
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
 ## Usage
 
@@ -120,9 +124,11 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
 ----
@@ -164,7 +170,8 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
 </details>
 
 ----
@@ -207,9 +214,11 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
 </details>
 
 ----
