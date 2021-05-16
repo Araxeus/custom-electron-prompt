@@ -7,7 +7,9 @@
 
 Custom prompt for Electron made easy with various templates
 
-There are currently 4 types available: Input / Keybind / Counter / Select
+There are currently 5 types available: Input / Keybind / Counter / Select / MultiInput
+
+There is also an option for a button with user-defined `onclick` function.
 
 
 ## Example of a Simple Prompt from Input Type
@@ -227,14 +229,13 @@ prompt({
 
 Create a prompt with multiple inputs.
 
+Returns an array with with input in same order that was given to the options, for example:
+multiInputOptions: [{usernameOptions}, {passwordOptions}] could return ["Jack", "61523"]
+
 Must specify selectOptions with valid entries in **one** of the following format:
 
 ```javascript
  multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
- multiInputOptions: {
-     0: {thisReturn0},
-     1: {thisReturn1}
- }
 ```
 
 <details>
@@ -282,15 +283,6 @@ This screenshot also contains a custom button.
 
 ## Options object (optional)
 
-### ⚠️⚠️ More new options :
-
-| Key                | Explanation                                                                                                                                                                                                                                                    |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| button       | (optional, object) adds a button after the success(OK) with a custom label, onClick and attributes. Object format: `{label: 'myLabel', click: () => alert("click"), attrs: {style: 'background: black'}}`, `{label: %string%, click: %function%, attrs: %object%}`|
-| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or `counter` for a number counter with buttons. or `keybind` for an electron accelerator grabber. or **`multiInput` to use more than 1 input in a prompt** Defaults to 'input'. |
-| multiInputOptions     | (optional, object) an Array of objects having options for every input, format: `[{inputAttrs:{type:'email'}},{inputAttrs:{type:'password'}}]`, `[object, object]` to use it without passing any options simply `[{},{},{}]`, just create x amount of empty objects to add x inputs.                                       |
-
-
 ### ⚠️ New options :
 
 | Key                | Explanation                                                                                                                                                                                                                                                    |
@@ -299,9 +291,11 @@ This screenshot also contains a custom button.
 | customScript       | (optional, string) The local path of a JS file to run on preload. Defaults to null.                                                                                                                                                                            |
 | enableRemoteModule | (optional, boolean) Wether the prompt window have remote modules activated, Defaults to false.                                                                                                                                                                 |
 | customStylesheet   | (optional, string) The local path of a CSS file to customize the style of the prompt window, **you can use just "dark" to use the premade dark skin**. Defaults to null.                                                                                       |
-| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or **`counter` for a number counter with buttons.** or **`keybind` for an electron accelerator grabber** Defaults to 'input'. |
+| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or `counter` for a number counter with buttons. or `keybind` for an electron accelerator grabber. or **`multiInput` to use more than 1 input in a prompt** Defaults to 'input'.  |
 | counterOptions     | (optional, object) minimum and maximum of counter, and if continuous input is enabled. format: `{minimum: %int%, maximum: %int%, multiFire: %boolean%`. min+max values defaults to null and multiFire defaults to false.                                       |
 | keybindOptions     | (optional, object)  Required if type=keybind. represent an array of objects in format: `{type: %string%, value: %string%, default: %string%}`. `default` has to be a valid accelerator to work                                                                 |
+| multiInputOptions     | (optional, object) an Array of objects having options for every input, format: `[{inputAttrs:{type:'email'}},{inputAttrs:{type:'password'}}]`, `[object, object]` to use it without passing any options simply `[{},{},{}]`, just create x amount of empty objects to add x inputs.                                       |
+| button       | (optional, object) adds a button after the success(OK) with a custom label, onClick and attributes. Object format: `{label: 'myLabel', click: () => alert("click"), attrs: {style: 'background: black'}}`, `{label: %string%, click: %function%, attrs: %object%}`|
 
 ### Original options:
 
