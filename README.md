@@ -232,7 +232,7 @@ Create a prompt with multiple inputs.
 Returns an array with with input in same order that was given to the options, for example:
 multiInputOptions: [{usernameOptions}, {passwordOptions}] could return ["Jack", "61523"]
 
-Must specify selectOptions with valid entries in **one** of the following format:
+Must specify multiInputOptions with valid entries in the following format:
 
 ```javascript
  multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
