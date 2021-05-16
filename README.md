@@ -1,6 +1,9 @@
 # Custom Electron Prompt
 
-[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
+[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Araxeus/custom-electron-prompt)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://araxeus.github.io/custom-electron-prompt)
 
 Custom prompt for Electron made easy with various templates
 
@@ -9,7 +12,8 @@ There are currently 4 types available: Input / Keybind / Counter / Select
 
 ## Example of a Simple Prompt from Input Type
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
 ## Usage
 
@@ -120,9 +124,11 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
 ----
@@ -164,7 +170,8 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
 </details>
 
 ----
@@ -207,14 +214,82 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png) ![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
+</details>
+
+----
+
+### multiInput
+
+Create a prompt with multiple inputs.
+
+Must specify selectOptions with valid entries in **one** of the following format:
+
+```javascript
+ multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
+ multiInputOptions: {
+     0: {thisReturn0},
+     1: {thisReturn1}
+ }
+```
+
+<details>
+  <summary> Code Example </summary>
+    
+ ```javascript
+prompt({
+	title: "credentials",
+	label: "Please enter username and password",
+	type: "multiInput",
+	multiInputOptions:
+    [{
+        inputAttrs:
+             {
+                type: "email",
+                required: true,
+                placeholder: "email"
+              }
+      },
+      {
+         inputAttrs:
+             {
+                type: "password",
+                placeholder: "password"
+              }
+     }],
+	resizable: true,
+	height: 150,
+	width: 300,
+}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+ ```
+ </details>
+ 
+ <details>
+  <summary> Screenshots </summary>
+
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
+
+
+This screenshot also contains a custom button.
+    
 </details>
 
 ----
 
 ## Options object (optional)
+
+### ⚠️⚠️ More new options :
+
+| Key                | Explanation                                                                                                                                                                                                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| button       | (optional, object) adds a button after the success(OK) with a custom label, onClick and attributes. Object format: `{label: 'myLabel', click: () => alert("click"), attrs: {style: 'background: black'}}`, `{label: %string%, click: %function%, attrs: %object%}`|
+| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or `counter` for a number counter with buttons. or `keybind` for an electron accelerator grabber. or **`multiInput` to use more than 1 input in a prompt** Defaults to 'input'. |
+| multiInputOptions     | (optional, object) an Array of objects having options for every input, format: `[{inputAttrs:{type:'email'}},{inputAttrs:{type:'password'}}]`, `[object, object]` to use it without passing any options simply `[{},{},{}]`, just create x amount of empty objects to add x inputs.                                       |
+
 
 ### ⚠️ New options :
 
@@ -266,6 +341,69 @@ module.exports = () => {
     // So you can use front features like `document.querySelector`
 };
 ```
+----
+
+### Custom/Extra Button (optional)
+
+Adds an extra/custom button with special functionalities other than success or error. Passing a `label` will update the button's innerHTML, `click` should be a funtion which will execute **onclick**, lastly `attrs` should contain all the attributes that should be added to the button such as custom styles.
+
+ <details>
+  <summary> Code Example </summary>
+    
+    
+```javascript
+await prompt({
+            title: 'Login credentials',
+            label: 'Credentials',
+            value: 'http://example.org',
+            inputAttrs: {
+                type: 'url'
+            },
+            type: 'multiInput',
+            multiInputOptions:
+                [{
+                    label: "username",
+                    inputAttrs:
+                    {
+                        type: "email",
+                        required: true,
+                        placeholder: "email"
+                    }
+                },
+                {
+                    label: "password",
+                    inputAttrs:
+                    {
+                        type: "password",
+                        placeholder: "password"
+                    }
+                }],
+            // customStylesheet: "dark",
+            button:
+            {
+                label: "Autofill",
+                click: () => 
+                {
+                    document.querySelectorAll("#data")[0].value = "mama@young.com";
+                    document.querySelectorAll("#data")[1].value = "mysecretrecipe";
+                },
+                attrs:
+                {
+                    abc: 'xyz'
+                }
+            }
+        }));
+```   
+    
+</details>
+
+ <details>
+  <summary> Screenshots </summary>
+    
+    
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
+</details>
+
 ----
 
 > Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt)
