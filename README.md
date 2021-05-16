@@ -7,7 +7,9 @@
 
 Custom prompt for Electron made easy with various templates
 
-There are currently 4 types available: Input / Keybind / Counter / Select
+There are currently 5 types available: Input / Keybind / Counter / Select / MultiInput
+
+There is also an option for a button with user-defined `onclick` function.
 
 
 ## Example of a Simple Prompt from Input Type
@@ -223,6 +225,62 @@ prompt({
 
 ----
 
+### multiInput
+
+Create a prompt with multiple inputs.
+
+Returns an array with with input in same order that was given to the options, for example:
+multiInputOptions: [{usernameOptions}, {passwordOptions}] could return ["Jack", "61523"]
+
+Must specify multiInputOptions with valid entries in the following format:
+
+```javascript
+ multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
+```
+
+<details>
+  <summary> Code Example </summary>
+    
+ ```javascript
+prompt({
+	title: "credentials",
+	label: "Please enter username and password",
+	type: "multiInput",
+	multiInputOptions:
+    [{
+        inputAttrs:
+             {
+                type: "email",
+                required: true,
+                placeholder: "email"
+              }
+      },
+      {
+         inputAttrs:
+             {
+                type: "password",
+                placeholder: "password"
+              }
+     }],
+	resizable: true,
+	height: 150,
+	width: 300,
+}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+ ```
+ </details>
+ 
+ <details>
+  <summary> Screenshots </summary>
+
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
+
+
+This screenshot also contains a custom button.
+    
+</details>
+
+----
+
 ## Options object (optional)
 
 ### ⚠️ New options :
@@ -233,9 +291,11 @@ prompt({
 | customScript       | (optional, string) The local path of a JS file to run on preload. Defaults to null.                                                                                                                                                                            |
 | enableRemoteModule | (optional, boolean) Wether the prompt window have remote modules activated, Defaults to false.                                                                                                                                                                 |
 | customStylesheet   | (optional, string) The local path of a CSS file to customize the style of the prompt window, **you can use just "dark" to use the premade dark skin**. Defaults to null.                                                                                       |
-| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or **`counter` for a number counter with buttons.** or **`keybind` for an electron accelerator grabber** Defaults to 'input'. |
+| type               | (optional, string) The type of input field, either 'input' for a standard text input field or 'select' for a dropdown type input or `counter` for a number counter with buttons. or `keybind` for an electron accelerator grabber. or **`multiInput` to use more than 1 input in a prompt** Defaults to 'input'.  |
 | counterOptions     | (optional, object) minimum and maximum of counter, and if continuous input is enabled. format: `{minimum: %int%, maximum: %int%, multiFire: %boolean%`. min+max values defaults to null and multiFire defaults to false.                                       |
 | keybindOptions     | (optional, object)  Required if type=keybind. represent an array of objects in format: `{type: %string%, value: %string%, default: %string%}`. `default` has to be a valid accelerator to work                                                                 |
+| multiInputOptions     | (optional, object) an Array of objects having options for every input, format: `[{inputAttrs:{type:'email'}},{inputAttrs:{type:'password'}}]`, `[object, object]` to use it without passing any options simply `[{},{},{}]`, just create x amount of empty objects to add x inputs.                                       |
+| button       | (optional, object) adds a button after the success(OK) with a custom label, onClick and attributes. Object format: `{label: 'myLabel', click: () => alert("click"), attrs: {style: 'background: black'}}`, `{label: %string%, click: %function%, attrs: %object%}`|
 
 ### Original options:
 
@@ -275,6 +335,69 @@ module.exports = () => {
     // So you can use front features like `document.querySelector`
 };
 ```
+----
+
+### Custom/Extra Button (optional)
+
+Adds an extra/custom button with special functionalities other than success or error. Passing a `label` will update the button's innerHTML, `click` should be a funtion which will execute **onclick**, lastly `attrs` should contain all the attributes that should be added to the button such as custom styles.
+
+ <details>
+  <summary> Code Example </summary>
+    
+    
+```javascript
+await prompt({
+            title: 'Login credentials',
+            label: 'Credentials',
+            value: 'http://example.org',
+            inputAttrs: {
+                type: 'url'
+            },
+            type: 'multiInput',
+            multiInputOptions:
+                [{
+                    label: "username",
+                    inputAttrs:
+                    {
+                        type: "email",
+                        required: true,
+                        placeholder: "email"
+                    }
+                },
+                {
+                    label: "password",
+                    inputAttrs:
+                    {
+                        type: "password",
+                        placeholder: "password"
+                    }
+                }],
+            // customStylesheet: "dark",
+            button:
+            {
+                label: "Autofill",
+                click: () => 
+                {
+                    document.querySelectorAll("#data")[0].value = "mama@young.com";
+                    document.querySelectorAll("#data")[1].value = "mysecretrecipe";
+                },
+                attrs:
+                {
+                    abc: 'xyz'
+                }
+            }
+        }));
+```   
+    
+</details>
+
+ <details>
+  <summary> Screenshots </summary>
+    
+    
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
+</details>
+
 ----
 
 > Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt)
