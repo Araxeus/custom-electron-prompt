@@ -23,25 +23,25 @@ There is also an option for a button with user-defined `onclick` function.
    
    {% highlight bash %}
    npm install custom-electron-prompt
-   {% highlight  %}
+   {% endhighlight %}
    
     or
    
    {% highlight bash %}
    yarn add custom-electron-prompt
-   {% highlight  %}
+   {% endhighlight %}
 
 2. Import prompt
    
    {% highlight javascript %}
    const prompt = require('custom-electron-prompt')
-   {% highlight  %}
+   {% endhighlight %}
 
 3. Create a prompt
    
    {% highlight javascript %}
    prompt([options, parentBrowserWindow])
-   {% highlight  %}
+   {% endhighlight %}
    
    calling the prompt function returns a Promise
    
@@ -71,7 +71,7 @@ prompt({
     }
 })
 .catch(console.error);
-{% highlight  %}
+{% endhighlight %}
 
 ## Special Prompt Types
 
@@ -88,7 +88,7 @@ keybindOptions: [
     { value: "copyAccelerator", label: "Copy", default: "Ctrl+C" }
     { value: "pasteAccelerator", label: "Paste", default: "Ctrl+V" }
 ]
-{% highlight  %}
+{% endhighlight %}
 
 Return an array made of objects in format 
 
@@ -120,7 +120,7 @@ prompt({
 		console.log("Pressed Cancel");
 })
 	.catch(console.error)
- {% highlight  %}
+ {% endhighlight %}
  </details>
  
  <details>
@@ -147,7 +147,7 @@ counterOptions: {
     maximum: 250, //defaults to null
     multiFire: true` //default to false
 }
-{% highlight  %}
+{% endhighlight %}
 
  minimum and maximum of numeric counter, and multifire indicate if continuous input is enabled.
 
@@ -166,7 +166,7 @@ prompt({
 	width: 300,
 	customStylesheet: "dark",
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- {% highlight  %}
+ {% endhighlight %}
  </details>
  
  <details>
@@ -192,7 +192,7 @@ Must specify selectOptions with valid entries in **one** of the following format
      2: "imSelected",
      potato: "thisReturnPotato"
  }
-{% highlight  %}
+{% endhighlight %}
 
 <details>
   <summary> Code Example </summary>
@@ -210,7 +210,7 @@ prompt({
 	width: 300,
 	customStylesheet: "dark",
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- {% highlight  %}
+ {% endhighlight %}
  </details>
  
  <details>
@@ -236,7 +236,7 @@ Must specify multiInputOptions with valid entries in the following format:
 
 {% highlight javascript %}
  multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
-{% highlight  %}
+{% endhighlight %}
 
 <details>
   <summary> Code Example </summary>
@@ -266,7 +266,7 @@ prompt({
 	height: 150,
 	width: 300,
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- {% highlight  %}
+ {% endhighlight %}
  </details>
  
  <details>
@@ -334,7 +334,7 @@ module.exports = () => {
     // This function will be called as a preload script
     // So you can use front features like `document.querySelector`
 };
-{% highlight  %}
+{% endhighlight %}
 ----
 
 ### Custom/Extra Button (optional)
