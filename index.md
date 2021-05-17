@@ -145,7 +145,7 @@ You **can** specify `counterOptions` with valid entries in format:
 counterOptions: {
     minimum: 0, //defaults to null
     maximum: 250, //defaults to null
-    multiFire: true` //default to false
+    multiFire: true //default to false
 }
 {% endhighlight %}
 
@@ -329,7 +329,7 @@ The window in which to display the prompt on. If not supplied, the parent window
 
 Create the script with the following template:
 
-{% highlight node %}
+{% highlight javascript %}
 module.exports = () => {
     // This function will be called as a preload script
     // So you can use front features like `document.querySelector`
