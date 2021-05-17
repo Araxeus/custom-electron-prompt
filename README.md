@@ -387,8 +387,8 @@ await prompt({
                 }
             }
         }));
-```   
-    
+```
+
 </details>
 
  <details>
