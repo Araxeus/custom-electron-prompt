@@ -45,7 +45,7 @@ There is also an option for a button with user-defined `onclick` function.
 
 ## Usage
 
-1. Install the npm package to your project directory with
+* 1: Install the npm package to your project directory with
    
   {% highlight bash %}
    npm install custom-electron-prompt
@@ -57,17 +57,17 @@ There is also an option for a button with user-defined `onclick` function.
    yarn add custom-electron-prompt
   {% endhighlight %}
 
-2. Import prompt
+* 2: Import prompt
    
   {% highlight javascript %}
    const prompt = require('custom-electron-prompt')
   {% endhighlight %}
 
-3. Create a prompt
+* 3: Create a prompt
    
-   {% highlight javascript %}
+  {% highlight javascript %}
    prompt([options, parentBrowserWindow])
-   {% endhighlight %}
+  {% endhighlight %}
    
    calling the prompt function returns a Promise
    
