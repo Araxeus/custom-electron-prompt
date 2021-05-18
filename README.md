@@ -19,29 +19,26 @@ There is also an option for a button with user-defined `onclick` function.
 
 ## Usage
 
-1. Install the npm package to your project directory with
-   
-   ```bash
-   npm install custom-electron-prompt
-   ```
-   
-    or
-   
-   ```bash
+* 1: Install the npm package to your project directory with  
+  ```bash
+  npm install custom-electron-prompt
+  ```
+  or
+  ```bash
    yarn add custom-electron-prompt
    ```
 
-2. Import prompt
+* 2: Import prompt
    
-   ```javascript
-   const prompt = require('custom-electron-prompt')
-   ```
+  ```javascript
+  const prompt = require('custom-electron-prompt')
+  ```
 
-3. Create a prompt
+* 3: Create a prompt
    
-   ```javascript
-   prompt([options, parentBrowserWindow])
-   ```
+  ```javascript
+  prompt([options, parentBrowserWindow])
+  ```
    
    calling the prompt function returns a Promise
    
@@ -187,10 +184,10 @@ Must specify selectOptions with valid entries in **one** of the following format
 ```javascript
  selectOptions: ["thisReturn0", "thisReturn1", "thisReturn2"]
  selectOptions: {
-     0: "thisReturn0",
-     1: "thisReturn1",
-     2: "imSelected",
-     potato: "thisReturnPotato"
+    0: "thisReturn0",
+    1: "thisReturn1",
+    2: "imSelected",
+    potato: "thisReturnPotato"
  }
 ```
 
