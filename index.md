@@ -1,4 +1,8 @@
 <style type="text/css" rel="stylesheet">
+details {
+    display: flex;
+}
+
 details>summary {
   list-style-type: none;
   outline: none;
@@ -45,28 +49,25 @@ There is also an option for a button with user-defined `onclick` function.
 
 ## Usage
 
-* 1: Install the npm package to your project directory with
-   
+* 1: Install the npm package to your project directory with  
   {% highlight bash %}
-   npm install custom-electron-prompt
+  npm install custom-electron-prompt
   {% endhighlight %}
-   
   or
-   
   {% highlight bash %}
    yarn add custom-electron-prompt
-  {% endhighlight %}
+   {% endhighlight %}
 
 * 2: Import prompt
    
   {% highlight javascript %}
-   const prompt = require('custom-electron-prompt')
+  const prompt = require('custom-electron-prompt')
   {% endhighlight %}
 
 * 3: Create a prompt
    
   {% highlight javascript %}
-   prompt([options, parentBrowserWindow])
+  prompt([options, parentBrowserWindow])
   {% endhighlight %}
    
    calling the prompt function returns a Promise
@@ -191,7 +192,7 @@ prompt({
 	height: 150,
 	width: 300,
 	customStylesheet: "dark",
-}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+}, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  {% endhighlight %}
  </details>
  
@@ -235,7 +236,7 @@ prompt({
 	height: 150,
 	width: 300,
 	customStylesheet: "dark",
-}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+}, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  {% endhighlight %}
  </details>
  
@@ -291,7 +292,7 @@ prompt({
 	resizable: true,
 	height: 150,
 	width: 300,
-}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+}, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  {% endhighlight %}
  </details>
  
@@ -429,4 +430,3 @@ await prompt({
 > Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt)
 >
 > The author of that package didn't want much contributions or changes, but you are more than welcome to contribute and create new stable prompt features over here :)
-
