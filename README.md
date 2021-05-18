@@ -162,7 +162,7 @@ prompt({
 	height: 150,
 	width: 300,
 	customStylesheet: "dark",
-}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+}, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  ```
  </details>
  
@@ -206,7 +206,7 @@ prompt({
 	height: 150,
 	width: 300,
 	customStylesheet: "dark",
-}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+}, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  ```
  </details>
  
@@ -262,7 +262,7 @@ prompt({
 	resizable: true,
 	height: 150,
 	width: 300,
-}, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
+}, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  ```
  </details>
  
