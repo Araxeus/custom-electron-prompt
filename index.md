@@ -47,21 +47,21 @@ There is also an option for a button with user-defined `onclick` function.
 
 1. Install the npm package to your project directory with
    
-   {% highlight bash %}
+  {% highlight bash %}
    npm install custom-electron-prompt
-   {% endhighlight %}
+  {% endhighlight %}
    
-    or
+  or
    
-   {% highlight bash %}
+  {% highlight bash %}
    yarn add custom-electron-prompt
-   {% endhighlight %}
+  {% endhighlight %}
 
 2. Import prompt
    
-   {% highlight javascript %}
+  {% highlight javascript %}
    const prompt = require('custom-electron-prompt')
-   {% endhighlight %}
+  {% endhighlight %}
 
 3. Create a prompt
    
