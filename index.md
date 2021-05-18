@@ -1,7 +1,33 @@
+<style type="text/css" rel="stylesheet">
+details>summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+details>summary::before {
+  content: '+ ';
+}
+
+details[open]>summary::before {
+  content: '- ';
+}
+
+details[open]>summary {
+  margin-bottom: 0.5rem;
+}
+</style>
 # Custom Electron Prompt
 
 <a href ="https://www.npmjs.com/package/custom-electron-prompt"><img src="https://img.shields.io/npm/v/custom-electron-prompt"></a> 
-<a href ="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a> 
+<a href ="https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?raw=true"></a> 
 <a href ="https://github.com/Araxeus/custom-electron-prompt"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 <a href ="https://araxeus.github.io/custom-electron-prompt"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"></a>
 
@@ -14,8 +40,8 @@ There is also an option for a button with user-defined `onclick` function.
 
 ## Example of a Simple Prompt from Input Type
 
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Input/Input.png">
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Input/InputDark.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png?raw=true">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png?raw=true">
 
 ## Usage
 
@@ -126,11 +152,11 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Keybind/Keybind3.png">
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Keybind/Keybind.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png?raw=true">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png?raw=true">
 
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Keybind/KeybindDark3.png">
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Keybind/KeybindDark.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png?raw=true">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png?raw=true">
 </details>
 
 ----
@@ -172,8 +198,8 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Counter/Counter.png">
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Counter/CounterDark.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png?raw=true">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png?raw=true">
 </details>
 
 ----
@@ -216,11 +242,11 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Select/SelectClosed.png">
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Select/SelectOpen.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png?raw=true">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png?raw=true">
 
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Select/SelectDarkClosed.png">
-<img src="https://raw.githubusercontent.com/Araxeus/custom-electron-prompt/main/screenshots/Select/SelectDarkOpen.png">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png?raw=true">
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png?raw=true">
 </details>
 
 ----
@@ -272,7 +298,7 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://raw.githubusercontent.com/amunim/custom-electron-prompt/main/screenshots/multiInput/button.PNG">
+<img src="https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG?raw=true">
 
 
 This screenshot also contains a custom button.
@@ -395,7 +421,7 @@ await prompt({
   <summary> Screenshots </summary>
     
     
-<img src="https://raw.githubusercontent.com/amunim/custom-electron-prompt/main/screenshots/multiInput/button.PNG">
+<img src="https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG?raw=true">
 </details>
 
 ----
@@ -403,3 +429,4 @@ await prompt({
 > Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt)
 >
 > The author of that package didn't want much contributions or changes, but you are more than welcome to contribute and create new stable prompt features over here :)
+
