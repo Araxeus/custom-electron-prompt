@@ -1,35 +1,9 @@
-<style type="text/css" rel="stylesheet">
-details>summary {
-  list-style-type: none;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid #eee;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-details>summary::-webkit-details-marker {
-  display: none;
-}
-
-details>summary::before {
-  content: '+ ';
-}
-
-details[open]>summary::before {
-  content: '- ';
-}
-
-details[open]>summary {
-  margin-bottom: 0.5rem;
-}
-</style>
 # Custom Electron Prompt
 
-<a href ="https://www.npmjs.com/package/custom-electron-prompt"><img src="https://img.shields.io/npm/v/custom-electron-prompt"></a> 
-<a href ="https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?raw=true"></a> 
-<a href ="https://github.com/Araxeus/custom-electron-prompt"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
-<a href ="https://araxeus.github.io/custom-electron-prompt"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"></a>
+[![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Araxeus/custom-electron-prompt)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://araxeus.github.io/custom-electron-prompt)
 
 Custom prompt for Electron made easy with various templates
 
@@ -40,34 +14,31 @@ There is also an option for a button with user-defined `onclick` function.
 
 ## Example of a Simple Prompt from Input Type
 
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png?raw=true">
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png?raw=true">
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
 
 ## Usage
 
-1. Install the npm package to your project directory with
-   
-   {% highlight bash %}
-   npm install custom-electron-prompt
-   {% endhighlight %}
-   
-    or
-   
-   {% highlight bash %}
+* 1: Install the npm package to your project directory with  
+  ```bash
+  npm install custom-electron-prompt
+  ```
+  or
+  ```bash
    yarn add custom-electron-prompt
-   {% endhighlight %}
+   ```
 
-2. Import prompt
+* 2: Import prompt
    
-   {% highlight javascript %}
-   const prompt = require('custom-electron-prompt')
-   {% endhighlight %}
+  ```javascript
+  const prompt = require('custom-electron-prompt')
+  ```
 
-3. Create a prompt
+* 3: Create a prompt
    
-   {% highlight javascript %}
-   prompt([options, parentBrowserWindow])
-   {% endhighlight %}
+  ```javascript
+  prompt([options, parentBrowserWindow])
+  ```
    
    calling the prompt function returns a Promise
    
@@ -77,7 +48,7 @@ There is also an option for a button with user-defined `onclick` function.
 
 ### Simple Input Example
 
-{% highlight javascript %}
+```javascript
 const prompt = require('./prompt');
 
 prompt({
@@ -97,7 +68,7 @@ prompt({
     }
 })
 .catch(console.error);
-{% endhighlight %}
+```
 
 ## Special Prompt Types
 
@@ -109,12 +80,12 @@ Create a prompt with possibly multiple keybind selects
 
 Must specify `keybindOptions` with valid entries in format:
 
-{% highlight javascript %}
+```javascript
 keybindOptions: [
     { value: "copyAccelerator", label: "Copy", default: "Ctrl+C" }
     { value: "pasteAccelerator", label: "Paste", default: "Ctrl+V" }
 ]
-{% endhighlight %}
+```
 
 Return an array made of objects in format 
 
@@ -125,7 +96,7 @@ where `accelerator` is the input for the `value` you registered
  <details>
   <summary> Code Example </summary>
     
- {% highlight javascript %}
+ ```javascript
 const kb = ($value, $label, $default) => { return { value: $value, label: $label, default: $default } };
 prompt({
 	title: "Keybinds",
@@ -146,17 +117,17 @@ prompt({
 		console.log("Pressed Cancel");
 })
 	.catch(console.error)
- {% endhighlight %}
+ ```
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png?raw=true">
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png?raw=true">
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
 
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png?raw=true">
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png?raw=true">
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
 ----
@@ -167,20 +138,20 @@ Create a prompt for selecting numeric values, with integrated `+` and `-` button
 
 You **can** specify `counterOptions` with valid entries in format:
 
-{% highlight javascript %}
+```javascript
 counterOptions: {
     minimum: 0, //defaults to null
     maximum: 250, //defaults to null
     multiFire: true //default to false
 }
-{% endhighlight %}
+```
 
  minimum and maximum of numeric counter, and multifire indicate if continuous input is enabled.
 
  <details>
   <summary> Code Example </summary>
     
- {% highlight javascript %}
+ ```javascript
 prompt({
 	title: "Counter",
 	label: "Choose a number:",
@@ -192,14 +163,14 @@ prompt({
 	width: 300,
 	customStylesheet: "dark",
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- {% endhighlight %}
+ ```
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png?raw=true">
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png?raw=true">
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/Counter.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Counter/CounterDark.png)
 </details>
 
 ----
@@ -210,20 +181,20 @@ Create a prompt with a dropdown select menu.
 
 Must specify selectOptions with valid entries in **one** of the following format:
 
-{% highlight javascript %}
+```javascript
  selectOptions: ["thisReturn0", "thisReturn1", "thisReturn2"]
  selectOptions: {
-     0: "thisReturn0",
-     1: "thisReturn1",
-     2: "imSelected",
-     potato: "thisReturnPotato"
+    0: "thisReturn0",
+    1: "thisReturn1",
+    2: "imSelected",
+    potato: "thisReturnPotato"
  }
-{% endhighlight %}
+```
 
 <details>
   <summary> Code Example </summary>
     
- {% highlight javascript %}
+ ```javascript
 prompt({
 	title: "Select",
 	label: "Choose an option:",
@@ -236,17 +207,17 @@ prompt({
 	width: 300,
 	customStylesheet: "dark",
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- {% endhighlight %}
+ ```
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png?raw=true">
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png?raw=true">
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
 
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png?raw=true">
-<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png?raw=true">
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
 </details>
 
 ----
@@ -260,14 +231,14 @@ multiInputOptions: [{usernameOptions}, {passwordOptions}] could return ["Jack", 
 
 Must specify multiInputOptions with valid entries in the following format:
 
-{% highlight javascript %}
+```javascript
  multiInputOptions: [{myinputoptions1}, {myinputoptions2}]
-{% endhighlight %}
+```
 
 <details>
   <summary> Code Example </summary>
     
- {% highlight javascript %}
+ ```javascript
 prompt({
 	title: "credentials",
 	label: "Please enter username and password",
@@ -292,13 +263,13 @@ prompt({
 	height: 150,
 	width: 300,
 }, win).then(input => { console.log(`input == ${input}`) }).catch(console.error)
- {% endhighlight %}
+ ```
  </details>
  
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG?raw=true">
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
 
 
 This screenshot also contains a custom button.
@@ -355,12 +326,12 @@ The window in which to display the prompt on. If not supplied, the parent window
 
 Create the script with the following template:
 
-{% highlight javascript %}
+```javascript
 module.exports = () => {
     // This function will be called as a preload script
     // So you can use front features like `document.querySelector`
 };
-{% endhighlight %}
+```
 ----
 
 ### Custom/Extra Button (optional)
@@ -371,7 +342,7 @@ Adds an extra/custom button with special functionalities other than success or e
   <summary> Code Example </summary>
     
     
-{% highlight javascript %}
+```javascript
 await prompt({
             title: 'Login credentials',
             label: 'Credentials',
@@ -413,7 +384,7 @@ await prompt({
                 }
             }
         }));
-{% endhighlight %}
+```
 
 </details>
 
@@ -421,7 +392,7 @@ await prompt({
   <summary> Screenshots </summary>
     
     
-<img src="https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG?raw=true">
+![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
 </details>
 
 ----
@@ -429,4 +400,3 @@ await prompt({
 > Disclaimer: this package is a highly modified version of  [electron-prompt](https://github.com/p-sam/electron-prompt)
 >
 > The author of that package didn't want much contributions or changes, but you are more than welcome to contribute and create new stable prompt features over here :)
-
