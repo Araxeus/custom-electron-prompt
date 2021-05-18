@@ -213,10 +213,10 @@ Must specify selectOptions with valid entries in **one** of the following format
 {% highlight javascript %}
  selectOptions: ["thisReturn0", "thisReturn1", "thisReturn2"]
  selectOptions: {
-     0: "thisReturn0",
-     1: "thisReturn1",
-     2: "imSelected",
-     potato: "thisReturnPotato"
+    0: "thisReturn0",
+    1: "thisReturn1",
+    2: "imSelected",
+    potato: "thisReturnPotato"
  }
 {% endhighlight %}
 
