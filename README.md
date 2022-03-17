@@ -224,7 +224,7 @@ prompt({
 
 ### multiInput
 
-Create a prompt with multiple inputs.
+Create a prompt with multiple inputs. Select inputs can also be used.
 
 Returns an array with with input in same order that was given to the options, for example:
 multiInputOptions: [{usernameOptions}, {passwordOptions}] could return ["Jack", "61523"]
@@ -252,6 +252,11 @@ prompt({
                 placeholder: "email"
               }
       },
+    {
+    	value: "2",
+	    selectOptions: ["thisReturn0", "thisReturn1", "imSelected", "thisReturn3"],
+	    // 	selectOptions: {0: "thisReturn0", 1: "thisReturn1", 2: "imSelected" , potato: "thisReturnPotato"},
+    },
       {
          inputAttrs:
              {
