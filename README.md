@@ -244,7 +244,7 @@ prompt({
     label: "Login Info:",
     type: "multiInput",
     multiInputOptions:
-        [
+
             {
                 inputAttrs:
                 {
@@ -275,12 +275,15 @@ prompt({
  <details>
   <summary> Screenshots </summary>
 
-![](https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
-
-
-This screenshot also contains a custom button.
+With `selectOptions`:
 
 ![](screenshots/multiInput/multiInputSelect.PNG)
+
+
+Without `selectOptions`:
+*This screenshot also contains a custom button.*
+
+![](screenshots/multiInput/button.PNG)
 
 </details>
 
