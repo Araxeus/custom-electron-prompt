@@ -244,7 +244,7 @@ prompt({
     label: "Login Info:",
     type: "multiInput",
     multiInputOptions:
-
+        [
             {
                 inputAttrs:
                 {
