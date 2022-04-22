@@ -1,4 +1,4 @@
-# Custom Electron Prompt
+# ✨ Custom Electron Prompt ✨
 
 [![NPM Version](https://img.shields.io/npm/v/custom-electron-prompt)](https://www.npmjs.com/package/custom-electron-prompt)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE)
@@ -277,13 +277,12 @@ prompt({
 
 With `selectOptions`:
 
-![](screenshots/multiInput/multiInputSelect.PNG)
-
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/multiInput/multiInputSelect.png)
 
 Without `selectOptions`:
 *This screenshot also contains a custom button.*
 
-![](screenshots/multiInput/button.PNG)
+![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/multiInput/button.png)
 
 </details>
 
