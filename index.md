@@ -28,10 +28,10 @@ details[open]>summary {
   margin-bottom: 0.5rem;
 }
 </style>
-# Custom Electron Prompt
+# ✨ Custom Electron Prompt ✨
 
-<a href ="https://www.npmjs.com/package/custom-electron-prompt"><img src="https://img.shields.io/npm/v/custom-electron-prompt"></a> 
-<a href ="https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?raw=true"></a> 
+<a href ="https://www.npmjs.com/package/custom-electron-prompt"><img src="https://img.shields.io/npm/v/custom-electron-prompt"></a>
+<a href ="https://github.com/Araxeus/custom-electron-prompt/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?raw=true"></a>
 <a href ="https://github.com/Araxeus/custom-electron-prompt"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 <a href ="https://araxeus.github.io/custom-electron-prompt"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"></a>
 
@@ -49,7 +49,7 @@ There is also an option for a button with user-defined `onclick` function.
 
 ## Usage
 
-* 1: Install the npm package to your project directory with  
+* 1: Install the npm package to your project directory with
   {% highlight bash %}
   npm install custom-electron-prompt
   {% endhighlight %}
@@ -59,19 +59,19 @@ There is also an option for a button with user-defined `onclick` function.
    {% endhighlight %}
 
 * 2: Import prompt
-   
+
   {% highlight javascript %}
   const prompt = require('custom-electron-prompt')
   {% endhighlight %}
 
 * 3: Create a prompt
-   
+
   {% highlight javascript %}
   prompt([options, parentBrowserWindow])
   {% endhighlight %}
-   
+
    calling the prompt function returns a Promise
-   
+
    Promise resolve returns the input or returns null if prompt was canceled
 
        On error, Prompise reject returns custom error message
@@ -117,15 +117,15 @@ keybindOptions: [
 ]
 {% endhighlight %}
 
-Return an array made of objects in format 
+Return an array made of objects in format
 
-`{value: "copyAccelerator", accelerator: "Ctrl+Shift+Insert"}` 
+`{value: "copyAccelerator", accelerator: "Ctrl+Shift+Insert"}`
 
 where `accelerator` is the input for the `value` you registered
 
  <details>
   <summary> Code Example </summary>
-    
+
  {% highlight javascript %}
 const kb = ($value, $label, $default) => { return { value: $value, label: $label, default: $default } };
 prompt({
@@ -149,7 +149,7 @@ prompt({
 	.catch(console.error)
  {% endhighlight %}
  </details>
- 
+
  <details>
   <summary> Screenshots </summary>
 
@@ -180,7 +180,7 @@ counterOptions: {
 
  <details>
   <summary> Code Example </summary>
-    
+
  {% highlight javascript %}
 prompt({
 	title: "Counter",
@@ -195,7 +195,7 @@ prompt({
 }, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  {% endhighlight %}
  </details>
- 
+
  <details>
   <summary> Screenshots </summary>
 
@@ -223,7 +223,7 @@ Must specify selectOptions with valid entries in **one** of the following format
 
 <details>
   <summary> Code Example </summary>
-    
+
  {% highlight javascript %}
 prompt({
 	title: "Select",
@@ -239,7 +239,7 @@ prompt({
 }, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  {% endhighlight %}
  </details>
- 
+
  <details>
   <summary> Screenshots </summary>
 
@@ -254,7 +254,7 @@ prompt({
 
 ### multiInput
 
-Create a prompt with multiple inputs.
+Create a prompt with multiple inputs. Select inputs can also be used.
 
 Returns an array with with input in same order that was given to the options, for example:
 multiInputOptions: [{usernameOptions}, {passwordOptions}] could return ["Jack", "61523"]
@@ -267,43 +267,54 @@ Must specify multiInputOptions with valid entries in the following format:
 
 <details>
   <summary> Code Example </summary>
-    
+
  {% highlight javascript %}
 prompt({
-	title: "credentials",
-	label: "Please enter username and password",
-	type: "multiInput",
-	multiInputOptions:
-    [{
-        inputAttrs:
-             {
-                type: "email",
-                required: true,
-                placeholder: "email"
-              }
-      },
-      {
-         inputAttrs:
-             {
-                type: "password",
-                placeholder: "password"
-              }
-     }],
-	resizable: true,
-	height: 150,
-	width: 300,
+    title: "credentials",
+    label: "Login Info:",
+    type: "multiInput",
+    multiInputOptions:
+        [
+            {
+                inputAttrs:
+                {
+                    type: "email",
+                    required: true,
+                    placeholder: "email"
+                }
+            },
+            {
+                inputAttrs:
+                {
+                    type: "password",
+                    placeholder: "password"
+                }
+            },
+            {
+                selectOptions: { na: "North America", eu: "Europe", other: "Other" },
+                value: "2"
+            }
+        ],
+    resizable: true,
+    width: 300,
+    height: 225,
 }, win).then(input => console.log(`input == ${input}`)).catch(console.error)
  {% endhighlight %}
  </details>
- 
+
  <details>
   <summary> Screenshots </summary>
 
-<img src="https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG?raw=true">
+With `selectOptions`:
+
+![](screenshots/multiInput/multiInputSelect.PNG)
 
 
-This screenshot also contains a custom button.
-    
+Without `selectOptions`:
+*This screenshot also contains a custom button.*
+
+![](screenshots/multiInput/button.PNG)
+
 </details>
 
 ----
@@ -370,8 +381,8 @@ Adds an extra/custom button with special functionalities other than success or e
 
  <details>
   <summary> Code Example </summary>
-    
-    
+
+
 {% highlight javascript %}
 await prompt({
             title: 'Login credentials',
@@ -403,7 +414,7 @@ await prompt({
             button:
             {
                 label: "Autofill",
-                click: () => 
+                click: () =>
                 {
                     document.querySelectorAll("#data")[0].value = "mama@young.com";
                     document.querySelectorAll("#data")[1].value = "mysecretrecipe";
@@ -420,8 +431,8 @@ await prompt({
 
  <details>
   <summary> Screenshots </summary>
-    
-    
+
+
 <img src="https://github.com/amunim/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG?raw=true">
 </details>
 
