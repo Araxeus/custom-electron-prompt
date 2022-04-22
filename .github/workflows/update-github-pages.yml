@@ -1,0 +1,43 @@
+# This workflow automatically update gh-pages when main/README.md is changed
+
+name: Update GH Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [README.md]
+
+jobs:
+  update-gh-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: gh-pages
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: "_config.yml"
+
+      - name: update gh-pages/README.md from main
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout origin/main README.md
+
+      - name: install mark2jek
+        run: npm install -g mark2jek
+
+      - name: transform README.md to index.md using mark2jek
+        run: mark2jek README.md new=index.md
+
+      - name: Commit and Push files
+        run: |
+          git add README.md index.md
+          git commit -m "[github-actions] update GH pages from main"
+          git push
