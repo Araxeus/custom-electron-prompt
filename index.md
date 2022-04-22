@@ -307,13 +307,12 @@ prompt({
 
 With `selectOptions`:
 
-![](screenshots/multiInput/multiInputSelect.PNG)
-
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/multiInput/multiInputSelect.png?raw=true">
 
 Without `selectOptions`:
 *This screenshot also contains a custom button.*
 
-![](screenshots/multiInput/button.PNG)
+<img src="https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/multiInput/button.png?raw=true">
 
 </details>
 
