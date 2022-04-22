@@ -22,35 +22,12 @@
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
-    "lint": "xo",
-    "lint:fix": "xo --fix",
-    "test": "npm run lint"
+    "release": "npm publish"
   },
   "files": [
     "lib/"
   ],
-  "xo": {
-    "esnext": true,
-    "env": [
-      "node",
-      "browser"
-    ],
-    "rules": {
-      "unicorn/prefer-ternary": 0,
-      "quotes": [
-        "error",
-        "double",
-        {
-          "avoidEscape": true,
-          "allowTemplateLiterals": true
-        }
-      ]
-    }
-  },
   "peerDependencies": {
     "electron": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
-  },
-  "devDependencies": {
-    "xo": "^0.38.2"
   }
 }
