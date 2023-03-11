@@ -7,7 +7,7 @@ module.exports = () => {
 		backgroundColor: customTitlebar.Color.fromHex("#050505"),
 		minimizable: false,
 		maximizable: false,
-		menu: null
+		menu: null,
 	});
 	const mainStyle = document.querySelector("#container").style;
 	mainStyle.width = "100%";
