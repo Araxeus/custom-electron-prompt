@@ -20,14 +20,9 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: rome/setup-rome@v0.4
         with:
-          node-version: 18
-          cache: npm
-          cache-dependency-path: "_config.yml"
+          version: latest 
 
-      - name: "Install Dependencies"
-        run: npm install
-
-      - name: "Run Rome"
-        run: npm run ci
+      - name: "Run rome ci ."
+        run: rome ci .
