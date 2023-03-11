@@ -1,6 +1,6 @@
 {
   "name": "custom-electron-prompt",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Custom prompt for Electron made easy with various templates",
   "homepage": "https://araxeus.github.io/custom-electron-prompt",
   "keywords": [
@@ -22,12 +22,18 @@
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
-    "release": "npm publish"
+    "release": "npm run ci && npm publish",
+    "ci": "rome ci .",
+    "lint": "rome lint . --write"
   },
   "files": [
     "lib/"
   ],
   "peerDependencies": {
     "electron": ">=10.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rome": "^11.0.0"
   }
 }
