@@ -1,0 +1,33 @@
+name: "Check Pull Request"
+on: [pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v3
+
+      - name: "Dependency Review"
+        uses: actions/dependency-review-action@v3
+
+  rome-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: "_config.yml"
+
+      - name: "Install Dependencies"
+        run: npm install
+
+      - name: "Run Rome"
+        run: npm run ci

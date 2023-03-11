@@ -22,12 +22,18 @@
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
-    "release": "npm publish"
+    "release": "npm run ci && npm publish",
+    "ci": "rome ci .",
+    "lint": "rome lint . --write"
   },
   "files": [
     "lib/"
   ],
   "peerDependencies": {
     "electron": ">=10.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rome": "^11.0.0"
   }
 }
