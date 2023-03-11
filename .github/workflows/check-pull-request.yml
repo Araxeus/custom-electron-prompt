@@ -22,7 +22,7 @@ jobs:
 
       - uses: rome/setup-rome@v0.4
         with:
-          version: latest 
+          version: latest
 
       - name: "Run rome ci ."
         run: rome ci .
