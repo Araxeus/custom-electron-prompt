@@ -24,7 +24,7 @@
   "scripts": {
     "release": "yarn ci && yarn publish",
     "ci": "rome ci .",
-    "lint": "rome lint . --write"
+    "lint": "rome format . --write"
   },
   "files": [
     "lib/"
