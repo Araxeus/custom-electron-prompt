@@ -33,6 +33,6 @@
     "electron": ">=10.0.0"
   },
   "devDependencies": {
-    "rome": "^11.0.0"
+    "rome": "^12.1.1"
   }
 }
