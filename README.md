@@ -6,9 +6,7 @@
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://araxeus.github.io/custom-electron-prompt)
 
 This is a customized version of *custom-electron-prompt* with multiple lines text input.
-NB: [Forked from](https://github.com/Araxeus/custom-electron-prompt)
-
-Customized version of 'Custom prompt for Electron': 'textarea' feature added
+This repository is a fork from [custom-electron-prompt](https://github.com/Araxeus/custom-electron-prompt)
 
 Originally 5 types are available: Input / Keybind / Counter / Select / MultiInput
 
@@ -28,23 +26,9 @@ There is also an option for a button with user-defined `onclick` function.
   npm install custom-electron-prompt
   ```
 
-* 2: Import prompt
-
-  ```javascript
-  const prompt = require('custom-electron-prompt')
-  ```
-
-* 3: Create a prompt
-
-  ```javascript
-  prompt([options, parentBrowserWindow])
-  ```
-
-   calling the prompt function returns a Promise
-
-   Promise resolve returns the input or returns null if prompt was canceled
-
-       On error, Prompise reject returns custom error message
+* 2: Test
+  0. Start demo app with a double click on `_run.bat`
+  1. Open "Text area dialog box" with menu `Tests/Textarea user input`
 
 ### Example of Multiple lines text input (cf. 'textarea' entity in HTML)
 
@@ -84,34 +68,11 @@ const readTextFromTextArea = async() => {
 } // readTextFromTextArea()
 ```
 
-
- <details>
+<details>
   <summary> Screenshots </summary>
   
 ![](https://github.com/Echopraxium/custom-electron-prompt/blob/main/screenshots/Textarea/sweetalert2_with_textarea.png)
 
-</details>
-
-----
-
- <details>
-  <summary> Screenshots </summary>
-
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectClosed.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectOpen.png)
-
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkClosed.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Select/SelectDarkOpen.png)
-</details>
-
-----
-
-
-
-</details>
- <details>
-  <summary> Screenshots </summary>
-![](https://github.com/echopraxium/custom-electron-prompt/blob/main/screenshots/multiInput/button.PNG)
 </details>
 
 ----

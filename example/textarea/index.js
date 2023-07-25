@@ -26,7 +26,7 @@ const menu_template = [
 	},
 	{ 	label: 'Tests',
 		submenu: [
-			{ 	label: 'Multiple lines text input (textarea)',
+			{ 	label: 'Textarea user input',
 				click() { 
 					let user_input_text = readTextFromTextArea();
 				}		 
