@@ -6,13 +6,15 @@
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://araxeus.github.io/custom-electron-prompt)
 
 This is a customized version of *custom-electron-prompt* with multiple lines text input.
+NB: [Forked from](https://github.com/Araxeus/custom-electron-prompt)
 
-Custom prompt for Electron made easy with various templates
+Customized version of 'Custom prompt for Electron': 'textarea' feature added
 
-There are currently 6 types available: Textarea / Input / Keybind / Counter / Select / MultiInput
+Originally 5 types are available: Input / Keybind / Counter / Select / MultiInput
+
+I've added: Textarea
 
 There is also an option for a button with user-defined `onclick` function.
-
 
 ## Example of a Simple Prompt from Input Type
 
@@ -85,12 +87,9 @@ const readTextFromTextArea = async() => {
 
  <details>
   <summary> Screenshots </summary>
+  
+![](https://github.com/Echopraxium/custom-electron-prompt/blob/main/screenshots/Textarea/sweetalert2_with_textarea.png)
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind3.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/Keybind.png)
-
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark3.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Keybind/KeybindDark.png)
 </details>
 
 ----
