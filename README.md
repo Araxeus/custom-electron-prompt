@@ -9,10 +9,7 @@ This is a customized version of *custom-electron-prompt* with multiple lines tex
 This repository is a fork from [custom-electron-prompt](https://github.com/Araxeus/custom-electron-prompt)
 
 Originally 5 types are available: Input / Keybind / Counter / Select / MultiInput
-
-I've added: Textarea
-
-There is also an option for a button with user-defined `onclick` function.
+I've added 'Textarea' type for a multiple lines text field
 
 ## Example of a Simple Prompt from Input Type
 
@@ -28,7 +25,7 @@ There is also an option for a button with user-defined `onclick` function.
 
 * 2: Test
   0. Start demo app with a double click on `_run.bat`
-  1. Open "Text area dialog box" with menu `Tests/Textarea user input`
+  1. Open "Text area dialog box" with menu `Tests/Textarea demo`
 
 ### Example of Multiple lines text input (cf. 'textarea' entity in HTML)
 

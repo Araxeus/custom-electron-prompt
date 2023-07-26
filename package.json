@@ -3,9 +3,9 @@
   "version": "1.5.7",
   "description": "Textarea feature added to 'Custom prompt for Electron'",
   
-  "main": "./example/textarea/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "start": "electron ."
+    "demo": "electron ./example/textarea/index.js"
   },
   
   "homepage": "https://github.com/Echopraxium/custom-electron-prompt",
@@ -21,7 +21,7 @@
     "dialog"
   ],
   "author": {
-    "name": "Textarea feature Kern",
+    "name": "Michel Kern",
     "email": "echopraxium@users.noreply.github.com",
     "url": "https://github.com/echopraxium"
   },

@@ -1,1 +1,1 @@
-start CMD /c "npm start"
+start CMD /c "npm run demo"

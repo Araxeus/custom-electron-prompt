@@ -13,6 +13,13 @@ const prompt     = require('../../lib/index.js');
 const MAIN_WINDOW_WIDTH  = 1000;
 const MAIN_WINDOW_HEIGHT = 600; 
 
+const DEFAULT_TEXT_CONTENT      = 
+	  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed finibus "
+	+ "lectus, vitae fringilla felis. Nunc pellentesque quis enim mollis varius. "
+	+ "Proin molestie ullamcorper tortor, id eleifend purus sodales et. Integer "
+	+ "sed pulvinar mauris, ac rhoncus tortor. Suspendisse potenti. Nulla gravida "
+	+ "in magna et vehicula."
+
 var gMainWindow      = null;
 let devTools_enabled = false;
 
@@ -26,7 +33,7 @@ const menu_template = [
 	},
 	{ 	label: 'Tests',
 		submenu: [
-			{ 	label: 'Textarea user input',
+			{ 	label: 'Textarea demo',
 				click() { 
 					let user_input_text = readTextFromTextArea();
 				}		 
@@ -74,12 +81,12 @@ const readTextFromTextArea = async() => {
 	async function getTextFromUserInput() {
 		// https://araxeus.github.io/custom-electron-prompt/
 		const x = await prompt({
-			title: 'Text pattern source: User Input',
-			label: 'Enter your text here:',
-			value: 'http://example.org',
+			title:  'Text pattern source: User Input',
+			label:  'Enter your text here:',
+			value:  DEFAULT_TEXT_CONTENT,
 			height: 365,
 			width:  580,
-			type: 'textarea',
+			type:   'textarea',
 			inputAttrs: { 'cols': 65, 'rows': 15 }
 		}).then((r) => {
 			if (r === null) {
