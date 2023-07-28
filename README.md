@@ -11,10 +11,9 @@ This repository is a fork from [custom-electron-prompt](https://github.com/Araxe
 Originally 5 types are available: Input / Keybind / Counter / Select / MultiInput
 I've added 'Textarea' type for a multiple lines text field
 
-## Example of a Simple Prompt from Input Type
+## Example of a 'Textarea' prompt
 
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/Input.png)
-![](https://github.com/Araxeus/custom-electron-prompt/blob/main/screenshots/Input/InputDark.png)
+![](https://github.com/Echopraxium/custom-electron-prompt/blob/main/screenshots/Textarea/sweetalert2_with_textarea.png)
 
 ## Usage
 
