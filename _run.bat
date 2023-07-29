@@ -1,0 +1,1 @@
+start CMD /c "npm run demo"

@@ -1,11 +1,18 @@
 {
   "name": "custom-electron-prompt",
   "version": "1.5.7",
-  "description": "Custom prompt for Electron made easy with various templates",
-  "homepage": "https://araxeus.github.io/custom-electron-prompt",
+  "description": "Textarea feature added to 'Custom prompt for Electron'",
+  
+  "main": "./lib/index.js",
+  "scripts": {
+    "demo": "electron ./example/textarea/index.js"
+  },
+  
+  "homepage": "https://github.com/Echopraxium/custom-electron-prompt",
   "keywords": [
     "electron",
     "input",
+    "textarea",
     "select",
     "counter",
     "accelerator",
@@ -14,25 +21,17 @@
     "dialog"
   ],
   "author": {
-    "name": "Araxeus",
-    "email": "araxeus@users.noreply.github.com",
-    "url": "https://github.com/araxeus"
+    "name": "Michel Kern",
+    "email": "echopraxium@users.noreply.github.com",
+    "url": "https://github.com/echopraxium"
   },
-  "repository": "github:araxeus/custom-electron-prompt",
+  "repository": "github:echopraxium/custom-electron-prompt",
   "license": "MIT",
-  "main": "lib/index",
-  "scripts": {
-    "release": "yarn ci && yarn publish",
-    "ci": "rome ci .",
-    "lint": "rome format . --write"
-  },
-  "files": [
-    "lib/"
-  ],
-  "peerDependencies": {
-    "electron": ">=10.0.0"
+
+  "dependencies": {
+    "mkdirp": "^3.0.1"
   },
   "devDependencies": {
-    "rome": "^11.0.0"
+    "electron": "^23.0.0"
   }
 }
