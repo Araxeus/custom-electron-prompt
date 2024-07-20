@@ -13,28 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: gh-pages
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-          cache-dependency-path: "_config.yml"
-
+          
       - name: update gh-pages/README.md from main
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git checkout origin/main README.md
 
-      - name: install mark2jek
-        run: npm install -g mark2jek
-
+      - uses: oven-sh/setup-bun@v2
       - name: transform README.md to index.md using mark2jek
-        run: mark2jek README.md new=index.md
+        run: bunx mark2jek README.md new=index.md
 
       - name: Commit and Push files
         run: |
