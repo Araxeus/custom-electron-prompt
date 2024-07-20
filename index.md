@@ -57,6 +57,11 @@ There is also an option for a button with user-defined `onclick` function.
   {% highlight bash %}
    yarn add custom-electron-prompt
    {% endhighlight %}
+  or
+  {% highlight bash %}
+   bun add custom-electron-prompt
+   {% endhighlight %}
+
 
 * 2: Import prompt
 
