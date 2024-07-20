@@ -27,6 +27,11 @@ There is also an option for a button with user-defined `onclick` function.
   ```bash
    yarn add custom-electron-prompt
    ```
+  or
+  ```bash
+   bun add custom-electron-prompt
+   ```
+
 
 * 2: Import prompt
 
