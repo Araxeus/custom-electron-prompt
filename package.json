@@ -1,6 +1,6 @@
 {
   "name": "custom-electron-prompt",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "description": "Custom prompt for Electron made easy with various templates",
   "homepage": "https://araxeus.github.io/custom-electron-prompt",
   "keywords": [
@@ -22,9 +22,10 @@
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
-    "release": "yarn ci && yarn publish",
-    "ci": "rome ci .",
-    "lint": "rome format . --write"
+    "release": "bun ci && npm publish",
+    "check": "bun biome check",
+    "ci": "bun biome ci",
+    "lint": "bun biome check --write"
   },
   "files": [
     "lib/"
@@ -33,6 +34,6 @@
     "electron": ">=10.0.0"
   },
   "devDependencies": {
-    "rome": "^11.0.0"
+    "@biomejs/biome": "^1.8.3"
   }
 }
