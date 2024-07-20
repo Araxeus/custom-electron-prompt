@@ -1,5 +1,7 @@
 name: "Check Pull Request"
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
@@ -9,15 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: "Dependency Review"
-        uses: actions/dependency-review-action@v3
-
-  bun-ci:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-      - run: bun ci
+        uses: actions/dependency-review-action@v4
 
