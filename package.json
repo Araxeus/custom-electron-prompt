@@ -22,7 +22,7 @@
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
-    "release": "bun ci && npm publish",
+    "release": "bun check && npm publish",
     "check": "bun biome check",
     "ci": "bun biome ci",
     "lint": "bun biome check --write"
