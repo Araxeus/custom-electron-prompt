@@ -308,6 +308,7 @@ Without `selectOptions`:
 | keybindOptions     | (optional, object)  Required if type=keybind. represent an array of objects in format: `{type: %string%, value: %string%, default: %string%}`. `default` has to be a valid accelerator to work                                                                 |
 | multiInputOptions     | (optional, object) an Array of objects having options for every input, format: `[{inputAttrs:{type:'email'}},{inputAttrs:{type:'password'}}]`, `[object, object]` to use it without passing any options simply `[{},{},{}]`, just create x amount of empty objects to add x inputs.                                       |
 | button       | (optional, object) adds a button after the success(OK) with a custom label, onClick and attributes. Object format: `{label: 'myLabel', click: () => alert("click"), attrs: {style: 'background: black'}}`, `{label: %string%, click: %function%, attrs: %object%}`|
+| x, y               | (optional, integer) The x and y coordinates of the prompt window. Defaults to undefined. (those are two different optional parameters)                                                                                                                                                                     |
 
 ### Original options:
 
