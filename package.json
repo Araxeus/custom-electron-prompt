@@ -19,7 +19,10 @@
     "email": "araxeus@users.noreply.github.com",
     "url": "https://github.com/araxeus"
   },
-  "repository": "github:araxeus/custom-electron-prompt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/araxeus/custom-electron-prompt.git"
+  },
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
