@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch: null
 
 permissions:
   id-token: write # Required for OIDC
@@ -17,10 +18,10 @@ jobs:
       - uses: actions/setup-node@v6
       - uses: oven-sh/setup-bun@v2
       - run: bun install
-
       - run: bun ci
-      # ensure we have the latest npm to get provenance support
-      - run: npm install -g npm@latest
 
+      - run: npm install -g npm@latest
+        # ensure we have the latest npm to get provenance support
       - run: npm publish --provenance --access public
         # this only works because this package has no dependencies that need to be built
+
