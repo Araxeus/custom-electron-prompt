@@ -34,6 +34,7 @@
   "files": [
     "lib/"
   ],
+  "types": "lib/custom-electron-prompt.d.ts",
   "peerDependencies": {
     "electron": ">=10.0.0"
   },
