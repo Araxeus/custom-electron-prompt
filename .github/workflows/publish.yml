@@ -1,0 +1,26 @@
+name: Publish Package
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install
+      - run: bun ci
+
+      # this only works because this package has no dependencies that need to be built
+      - run: npm publish --provenance --access public

@@ -1,7 +1,7 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5em;
   color: #333;
   background-color: #fff;
@@ -107,7 +107,7 @@ div.keybind {
   justify-content: center;
 }
 
-div.keybind button {
+#container div.keybind button {
   width: auto;
 }
 
