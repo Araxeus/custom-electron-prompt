@@ -17,11 +17,11 @@
   "author": {
     "name": "Araxeus",
     "email": "araxeus@users.noreply.github.com",
-    "url": "https://github.com/araxeus"
+    "url": "https://github.com/Araxeus"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/araxeus/custom-electron-prompt.git"
+    "url": "git+https://github.com/Araxeus/custom-electron-prompt.git"
   },
   "license": "MIT",
   "main": "lib/index",
