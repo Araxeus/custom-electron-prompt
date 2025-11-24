@@ -7,7 +7,7 @@
 
 Custom prompt for Electron made easy with various templates
 
-There are currently 5 types available: Input / Keybind / Counter / Select / MultiInput
+There are currently 5 types available: input / keybind / counter / select / multiInput
 
 There is also an option for a button with user-defined `onclick` function.
 
@@ -111,7 +111,7 @@ prompt({
 	keybindOptions: [
 		{ value: "volumeUp", label: "Increase Volume", default: "Shift+PageUp" },
 		kb("volumeDown", "Decrease Volume", "Shift+PageDown"),
-		kb("playPause", "Play / Pause") // (null || empty string || undefined) == no default
+		kb("playPause", "Play / Pause") // (empty string || undefined) == no default
 	],
 	resizable: true,
 	customStylesheet: "dark",
@@ -162,7 +162,7 @@ prompt({
 	label: "Choose a number:",
 	value: "59",
 	type: "counter",
-	counterOptions: { minimum: -69, maximum: null, multiFire: true },
+	counterOptions: { minimum: -69, maximum: undefined, multiFire: true },
 	resizable: true,
 	height: 150,
 	width: 300,

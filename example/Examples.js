@@ -5,7 +5,7 @@ prompt(
         label: 'Choose a number:',
         value: '59',
         type: 'counter',
-        counterOptions: { minimum: -69, maximum: null, multiFire: true },
+        counterOptions: { minimum: -69, maximum: undefined, multiFire: true },
         resizable: true,
         height: 150,
         width: 300,
@@ -61,7 +61,7 @@ prompt(
                 default: 'Shift+PageUp',
             },
             kb('volumeDown', 'Decrease Volume', 'Shift+PageDown'),
-            kb('playPause', 'Play / Pause'), // (null || empty string || undefined) == no default
+            kb('playPause', 'Play / Pause'), // (empty string || undefined) == no default
         ],
         resizable: true,
         customStylesheet: 'dark',
