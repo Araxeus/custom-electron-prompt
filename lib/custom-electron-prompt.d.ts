@@ -1,7 +1,9 @@
 declare module 'custom-electron-prompt' {
     import type { BrowserWindow } from 'electron';
 
-    export type SelectOptions = Record<string, string>;
+    export type PromptTypes = 'input' | 'select' | 'counter' | 'keybind' | 'multiInput';
+
+    export type SelectOptions = Record<string, string> | string[];
 
     export interface CounterOptions {
         minimum?: number;
@@ -16,8 +18,8 @@ declare module 'custom-electron-prompt' {
     }
 
     export interface InputOptions {
-        label: string;
-        value: unknown;
+        label?: string;
+        value?: unknown;
         inputAttrs?: Partial<HTMLInputElement>;
         selectOptions?: SelectOptions;
     }
@@ -90,7 +92,7 @@ declare module 'custom-electron-prompt' {
                 ? string[]
                 : never;
 
-    const prompt: <T extends Type>(
+    const prompt: <T extends PromptTypes>(
         options?: PromptOptions<T> & { type: T },
         parent?: BrowserWindow,
     ) => Promise<PromptResult<T> | null>;
