@@ -22,9 +22,7 @@ jobs:
       - name: Verify npm version
         run: npm -v
       - uses: oven-sh/setup-bun@v2
-      - run: bun install
+      - run: bun ci
       - run: bun run ci
-        
-      - run: npm publish --provenance --access public
-        # this only works because this package has no dependencies that need to be built
 
+      - run: npm publish --provenance --access public
